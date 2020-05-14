@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>log</string>
+		<string>txt</string>
+	</array>
+	<key>name</key>
+	<string>Huawei Log</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\s+[A-Z\-_0-9/]+[A-Z\-_]+[A-Z\-_0-9]+\s+</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>device transceiver .*</string>
+			<key>name</key>
+			<string>variable.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(interface is [Up|Down].)|(TOPOLOGY_CHANGE)</string>
+			<key>name</key>
+			<string>invalid.deprecated.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+\.\d+\.\d+\.\d+</string>
+			<key>name</key>
+			<string>constant.character.escape.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(interface \S+)|(^bridge-domain \d+)|(^dfs-group \S+)</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\S+ has turned into UP state)|(\s+[Uu][Pp]\s+)|(\s+Established\s+)|(\s+forwarding\s+)|(\s+enable\s+)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\S+ has turned into DOWN state)</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+[Dd]own\s+)|(\s+clock status: unsynchronized\s+)|(\s+disable\s+)|(unsynchronized)|(shutdown)|(undo enable)</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(There is a congestion risk on port \S+)|(Interface output discard exceeded the log threshold.*?Interface=\S+)</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(Interface output discard restored to the log threshold.*?Interface=\S+)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.huawei</string>
+		</dict>
+
+
+
+		<dict>
+			<key>match</key>
+			<string>(ARP detects IP conflict)|(Received an ARP packet with a duplicate IP address from the interface)</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(Virtual Router state \S+ changed to \S+)</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+clock status: unsynchronized\s+)|(bgpBackwardTransition_active.*)|(bgpBackwardTransition_clear.*)|(discarding)</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+[Uu][Pp]\s+)|(\s+Established\s+)|(\s+forwarding\s+)|(PEER_ESTABLISHED_NOTIFICATION.*)|(PEER_BACKWARDTRANS_NOTIFICATION.*)|(bgpBackwardTransition_clear.*)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Command=".*"</string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		
+		<dict>
+			<key>match</key>
+			<string>("display .*")|(disp .*)</string>
+			<key>name</key>
+			<string>variable.parameter.huawei</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>Command=".*"</string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string></string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>access-list</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>CurrState\S+</string>
+			<key>name</key>
+			<string>support.constant.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>peer</string>
+			<key>name</key>
+			<string>markup.list.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[#!](.*)</string>
+			<key>name</key>
+			<string>comment.line.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>cipher (\S)*</string>
+			<key>name</key>
+			<string>comment.line.huawei</string>
+		</dict>
+
+
+
+
+
+		<dict>
+			<key>match</key>
+			<string>(Send a authentication request packet to radius server)|(Received a authentication challenge packet from radius server)</string>
+			<key>name</key>
+			<string>variable.parameter.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(Eapol send authentication request challenge packet to user)</string>
+			<key>name</key>
+			<string>storage.type.huawei</string>
+		</dict>
+
+
+
+		<dict>
+			<key>match</key>
+			<string>Received a authentication reject packet from radius server</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(Received a authentication accept packet from radius server)</string>
+			<key>name</key>
+			<string>entity.name.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(Receive a EAPoL response challenge packet from user)|(Receive a EAPoL response identity packet from user)|(Send a EAPoL request identity packet to user)|(Receive an ARP packet from user)</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		
+		<dict>
+			<key>match</key>
+			<string>Resend a EAPoL request identity packet to user</string>
+			<key>name</key>
+			<string>variable.parameter.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Send EAP-Failure packet to user</string>
+			<key>name</key>
+			<string>invalid.deprecated.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(No response of request challenge from user)|(No response of request identity from user)</string>
+			<key>name</key>
+			<string>invalid.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Begin to get local authorization, NewAuthorizeType = \d+</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Id:\d+</string>
+			<key>name</key>
+			<string>constant.character.escape.huawei</string>
+		</dict>
+		
+
+	</array>
+	<key>scopeName</key>
+	<string>text.huawei</string>
+	<key>uuid</key>
+	<string>f3ba50f0-2bad-48b7-9509-f6d72e353ddb</string>
+</dict>
+</plist>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>cfg</string>
+		<string>txt</string>
+	</array>
+	<key>name</key>
+	<string>Huawei Config</string>
+	<key>patterns</key>
+	<array>
+		<!-- -->
+		<dict>
+			<key>match</key>
+			<string>\s+[A-Z\-_0-9/]+[A-Z\-_]+[A-Z\-_0-9]+\s+</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		<!-- Transceiver information -->
+		<dict>
+			<key>match</key>
+			<string>device transceiver .*</string>
+			<key>name</key>
+			<string>variable.huawei</string>
+		</dict>
+		
+		<dict>
+			<key>match</key>
+			<string>(ip vpn-instance \S+)|(vpn-instance \S+)</string>
+			<key>name</key>
+			<string>variable.parameter.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>display .*</string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+[Dd]own\s+)|(\s+DOWN\s+)|(\s+clock status: unsynchronized\s+)|(\s+disable\s+)|(unsynchronized)|(shutdown)|(undo enable)</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+[Uu][Pp]\s+)|(\s+Established\s+)|(\s+forwarding\s+)|(\s+enable\s+)|(synchronized)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\].*</string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(interface \S+)|(^bridge-domain \d+)|(^dfs-group \S+)|(authentication-profile name \S+)|(\S+ transceiver information)</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(radius-server template \S+)|(hwtacacs-server template \S+)|(^aaa$)</string>
+			<key>name</key>
+			<string>entity.name.class.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(authentication-scheme \S+)|(authorization-scheme \S+)|(accounting-scheme \S+)|(service-scheme \S+)</string>
+			<key>name</key>
+			<string>entity.other.inherited-class.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(acl \S+)</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>access-list</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>crypto </string>
+			<key>name</key>
+			<string>string.unquoted.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>deny </string>
+			<key>name</key>
+			<string>support.constant.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>permit </string>
+			<key>name</key>
+			<string>constant.character.escape.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>.* as-number .*</string>
+			<key>name</key>
+			<string>constant.character.escape.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>peer \S+ enable</string>
+			<key>name</key>
+			<string>constant.character.escape.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s*[#!](.*)</string>
+			<key>name</key>
+			<string>comment.line.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>cipher (\S)*</string>
+			<key>name</key>
+			<string>comment.line.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+\.\d+\.\d+\.\d+(/\d{1,2})?</string>
+			<key>name</key>
+			<string>constant.numeric.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\s+ipv4-family .*)|(\s+ipv6-family .*)|</string>
+			<key>name</key>
+			<string>support.class.huawei</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.huawei</string>
+	<key>uuid</key>
+	<string>f3ba50f0-2bad-48b7-9509-f6d72e353ddb</string>
+</dict>
+</plist>
