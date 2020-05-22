@@ -72,6 +72,14 @@
 			<string>entity.other.attribute-name.huawei</string>
 		</dict>
 
+		<!-- HARDWARE -->
+		<!-- Temperature -->
+		<dict>
+			<key>match</key>
+			<string>temperature \S+ \S+ threshold\s*\S*\.</string>
+			<key>name</key>
+			<string>support.function.huawei</string>
+		</dict>
 
 
 		<dict>
