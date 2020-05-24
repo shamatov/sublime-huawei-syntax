@@ -68,7 +68,27 @@
 			<string>entity.name.function.huawei</string>
 		</dict>
 
+		<!-- BFD -->
+		<dict>
+			<key>match</key>
+			<string>BFD session changed to Up</string>
+			<key>name</key>
+			<string>entity.name.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>BFD session changed to Down</string>
+			<key>name</key>
+			<string>keyword.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Diagnostic=.*?,</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
 		
+
 		<!-- STP -->
 		<dict>
 			<key>match</key>
