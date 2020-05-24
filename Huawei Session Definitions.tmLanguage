@@ -11,12 +11,7 @@
 	<string>Huawei Session</string>
 	<key>patterns</key>
 	<array>
-		<dict>
-			<key>match</key>
-			<string>\s+[A-Z\-_0-9/]+[A-Z\-_]+[A-Z\-_0-9]+\s+</string>
-			<key>name</key>
-			<string>string.huawei</string>
-		</dict>
+
 		<dict>
 			<key>match</key>
 			<string>device transceiver .*</string>
@@ -59,12 +54,7 @@
 			<key>name</key>
 			<string>keyword.huawei</string>
 		</dict>
-		<dict>
-			<key>match</key>
-			<string>\[.*\]</string>
-			<key>name</key>
-			<string>string.huawei</string>
-		</dict>
+
 		<dict>
 			<key>match</key>
 			<string>(interface \S+)|(^bridge-domain \d+)|(^dfs-group \S+)</string>
@@ -77,6 +67,48 @@
 			<key>name</key>
 			<string>entity.name.function.huawei</string>
 		</dict>
+
+		
+		<!-- STP -->
+		<dict>
+			<key>match</key>
+			<string>This bridge is the root</string>
+			<key>name</key>
+			<string>entity.name.class.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Port.*FORWARDING</string>
+			<key>name</key>
+			<string>entity.name.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Port.*LEARNING</string>
+			<key>name</key>
+			<string>invalid.function.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Port.*DISCARDING</string>
+			<key>name</key>
+			<string>invalid.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>Port\S+DOWN</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+
+		<!-- CHECK 
+		<dict>
+			<key>match</key>
+			<string>\[.*\]</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		-->
 		<dict>
 			<key>match</key>
 			<string></string>
@@ -149,6 +181,16 @@
 			<string>cipher (\S)*</string>
 			<key>name</key>
 			<string>comment.line.huawei</string>
+		</dict>
+
+
+
+
+		<dict>
+			<key>match</key>
+			<string>\s+[A-Z\-_0-9/]+[A-Z\-_]+[A-Z\-_0-9]+\s+</string>
+			<key>name</key>
+			<string>string.huawei</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
