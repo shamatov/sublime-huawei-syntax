@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>cfg</string>
+		<string>txt</string>
+	</array>
+	<key>name</key>
+	<string>Huawei Dorado</string>
+	<key>patterns</key>
+	<array>
+
+		<!-- Common -->
+		<dict>
+			<key>match</key>
+			<string>    .*?\:</string>
+			<key>name</key>
+			<string>variable.parameter.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\d+\%</string>
+			<key>name</key>
+			<string>entity.name.function.huawei</string>
+		</dict>
+		<!-- Capacity -->
+		<dict>
+			<key>match</key>
+			<string>\S+TB|\S+GB|\S+MB|\S+KB</string>
+			<key>name</key>
+			<string>entity.name.function.huawei</string>
+		</dict>
+		<!-- Ratio -->
+		<dict>
+			<key>match</key>
+			<string>\d+\:\d+</string>
+			<key>name</key>
+			<string>storage.huawei</string>
+		</dict>
+		<!-- -->
+		<dict>
+			<key>match</key>
+			<string>\s+[A-Z\-_0-9/]+[A-Z\-_]+[A-Z\-_0-9]+\s+</string>
+			<key>name</key>
+			<string>string.huawei</string>
+		</dict>
+		<!-- Network -->
+		<dict>
+			<key>match</key>
+			<string>\d+\.\d+\.\d+\.\d+</string>
+			<key>name</key>
+			<string>constant.language.huawei</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\S\S\:\S\S\:\S\S\:\S\S\:\S\S\:\S\S</string>
+			<key>name</key>
+			<string>constant.language.huawei</string>
+		</dict>
+
+
+	</array>
+	<key>scopeName</key>
+	<string>text.huawei</string>
+	<key>uuid</key>
+	<string>f3ba50f0-2bad-48b7-9509-f6d72e353ddb</string>
+</dict>
+</plist>
